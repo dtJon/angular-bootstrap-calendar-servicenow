@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $rootScope, moment, $window, spModal) {
+	var c = this;
+	
+	$rootScope.$on('angular-bootstrap-calendar-init', function(evt, vm){
+		vm.eventClicked = function(event){
+			var begin = moment(event.startsAt).toString();
+			var end = moment(event.endsAt).toString();
+			spModal.alert('Event ' + event.title + ' Starts at ' + begin + ' and ends at ' + end);
+		};
+		
+		function format(dt){
+			return moment(dt).format('ddd, M/D/Y h:mmA');
+		}
+
+
+    // Override the format of the titles and tool tips on the different views
+		vm.calendarEventTitle.weekView = function(event){
+			return event.title  + ' (' + format(event.startsAt) + ' to ' + format(event.endsAt) + ')';
+		};
+		
+		vm.calendarEventTitle.weekViewTooltip = function(event){
+			return event.title  + ' (' + format(event.startsAt) + ' to ' + format(event.endsAt) + ')';
+		};
+		
+		vm.calendarEventTitle.monthView = function(event){
+			return event.title  + ' (' + format(event.startsAt) + ' to ' + format(event.endsAt) + ')' +
+				'<span class="event-title"> :' + event.title + '</span>';
+		};
+	});	
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>test-angular-bootstrap-calendar</id>
+        <internal>false</internal>
+        <link/>
+        <name>Test Angular Bootstrap Calendar</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	var viewDate = new GlideDateTime().toString();
+
+	// Get events from the server, for example from cmdb_ci_outage
+	var events = [];
+	
+	events.push(setDates({
+        title: '<i class="glyphicon glyphicon-asterisk"></i> <span class="text-primary">Another event</span>, with a <i>html</i> title',
+        color: { primary : 'red', secondary : 'pink'},
+        startsAt: '',
+        endsAt: '',
+        draggable: true,
+        resizable: true
+      }, -2, 8));
+	events.push(setDates({
+        title: 'This is a really long event title that occurs on every year',
+        color:  { primary : 'green', secondary : 'light-green' },
+        startsAt: '',
+        endsAt: '',
+        recursOn: 'year',
+        draggable: true,
+        resizable: true
+      }, -1, 120));
+	events.push(setDates({
+        title: 'An event',
+        color: { primary : 'blue', secondary : 'light-blue' },
+        startsAt: '',
+        endsAt: '',
+        draggable: true,
+        resizable: true
+      }, 0.5, 19));
+	
+	var defaultCalendarView = 'month';
+	
+	// If using Custom Templates add them to the angular-bootstrap-calendar widget in the platform
+	// related list then reference them here by name and template file name.
+/*	var customTemplateUrls = { 'calendarMonthCellEvents' : 'calendarMonthCellEvents.html',
+														'calendarMonthCell' : 'customMonthCellText.html',
+														'calendarWeekView' : 'calendarWeekView.html' };*/
+	var customTemplateUrls = '';
+	
+	data.calendarWidget = $sp.getWidget('angular-bootstrap-calendar', { 'events' : events, 'id' : 'calendar1', 
+																																			'show_navigation' : true, 'default_calendar_view' : defaultCalendarView,
+																																			'custom_template_urls' : customTemplateUrls,
+																																		 'start_date' : viewDate });
+
+	function setDates(event, daysFromNowStart, hoursLength){
+		var dtStart = new GlideDateTime();
+		dtStart.addDaysLocalTime(daysFromNowStart);
+		
+		event.startsAt = dtStart.toString();
+	
+		var dtEnd = new GlideDateTime(dtStart);
+		dtEnd.addSeconds(60 * 60 * hoursLength);
+		event.endsAt = dtEnd.toString();
+		
+		return event;
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 16:12:04</sys_created_on>
+        <sys_id>699bfd5bdb10230002157a613996190a</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Test Angular Bootstrap Calendar</sys_name>
+        <sys_package display_value="Angular Bootstrap Calendar" source="x_270609_a_b_c">77f5b557db10230002157a61399619ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Angular Bootstrap Calendar">77f5b557db10230002157a61399619ba</sys_scope>
+        <sys_update_name>sp_widget_699bfd5bdb10230002157a613996190a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 17:21:51</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading" ng-if="options.title">
+    <h2 class="panel-title">
+      {{::options.title}}
+    </h2>
+  </div>
+  <div class="panel-body">
+    <div class="calendar-panel">
+		  <sp-widget widget="data.calendarWidget"/>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

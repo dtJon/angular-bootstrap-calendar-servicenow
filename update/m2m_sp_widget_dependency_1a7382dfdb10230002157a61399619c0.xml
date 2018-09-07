@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="INSERT_OR_UPDATE">
+        <sp_dependency display_value="angularMoment">7f07b9d7db10230002157a613996198b</sp_dependency>
+        <sp_widget display_value="Test Angular Bootstrap Calendar">699bfd5bdb10230002157a613996190a</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 16:46:31</sys_created_on>
+        <sys_id>1a7382dfdb10230002157a61399619c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>angularMoment.Test Angular Bootstrap Calendar</sys_name>
+        <sys_package display_value="Angular Bootstrap Calendar" source="x_270609_a_b_c">77f5b557db10230002157a61399619ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Angular Bootstrap Calendar">77f5b557db10230002157a61399619ba</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_1a7382dfdb10230002157a61399619c0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 16:46:31</sys_updated_on>
+    </m2m_sp_widget_dependency>
+</record_update>

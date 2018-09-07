@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_css_include">
+    <m2m_sp_dependency_css_include action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sp_css_include display_value="angular-bootstrap-calendar.css">d9f38edfdb10230002157a61399619ca</sp_css_include>
+        <sp_dependency display_value="mwl.calendar">40b8391bdb10230002157a613996190b</sp_dependency>
+        <sys_class_name>m2m_sp_dependency_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 16:50:59</sys_created_on>
+        <sys_id>6374c213db50230002157a6139961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>angular-bootstrap-calendar.css.mwl.calendar</sys_name>
+        <sys_package display_value="Angular Bootstrap Calendar" source="x_270609_a_b_c">77f5b557db10230002157a61399619ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Angular Bootstrap Calendar">77f5b557db10230002157a61399619ba</sys_scope>
+        <sys_update_name>m2m_sp_dependency_css_include_6374c213db50230002157a6139961914</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 16:50:59</sys_updated_on>
+    </m2m_sp_dependency_css_include>
+</record_update>

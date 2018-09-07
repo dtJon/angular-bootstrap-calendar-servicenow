@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include">
+    <sp_css_include action="INSERT_OR_UPDATE">
+        <name>angular-bootstrap-calendar.css</name>
+        <source>local</source>
+        <sp_css display_value="angular-bootstrap-calendar.min.css">46140213db50230002157a6139961927</sp_css>
+        <sys_class_name>sp_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 16:50:59</sys_created_on>
+        <sys_id>d9f38edfdb10230002157a61399619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>angular-bootstrap-calendar.css</sys_name>
+        <sys_package display_value="Angular Bootstrap Calendar" source="x_270609_a_b_c">77f5b557db10230002157a61399619ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Angular Bootstrap Calendar">77f5b557db10230002157a61399619ba</sys_scope>
+        <sys_update_name>sp_css_include_d9f38edfdb10230002157a61399619ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 16:50:59</sys_updated_on>
+        <url/>
+    </sp_css_include>
+</record_update>

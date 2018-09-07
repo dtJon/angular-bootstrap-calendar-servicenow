@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include">
+    <sp_js_include action="INSERT_OR_UPDATE">
+        <display_name>https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.3.0/angular-moment.min.js</display_name>
+        <source>url</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-07 15:58:36</sys_created_on>
+        <sys_id>4538f51bdb10230002157a613996199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.3.0/angular-moment.min.js</sys_name>
+        <sys_package display_value="Angular Bootstrap Calendar" source="x_270609_a_b_c">77f5b557db10230002157a61399619ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Angular Bootstrap Calendar">77f5b557db10230002157a61399619ba</sys_scope>
+        <sys_ui_script/>
+        <sys_update_name>sp_js_include_4538f51bdb10230002157a613996199e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-07 15:58:36</sys_updated_on>
+        <url>https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.3.0/angular-moment.min.js</url>
+    </sp_js_include>
+</record_update>
